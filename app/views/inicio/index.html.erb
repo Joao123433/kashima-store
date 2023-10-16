@@ -1,0 +1,17 @@
+<div class="flex justify-between w-[calc(100vw-15px)] gap-3">
+    <%= image_tag 'img-slide1', width: "32.1%" %>
+    <%= image_tag 'img-slide2', width: "32.1%" %>
+    <%= image_tag 'img-slide3', width: "32.1%" %>
+</div>
+
+<section class="w-[calc(100vw-15px)] flex items-center flex-col">
+    <h1 class="mt-11 mb-5">LISTA DE PRODUTOS</h1>
+
+    
+    <div class="grid grid-cols-3 gap-5 mb-11">
+      <% @clotings.each do |c| %>
+        <%= link_to (image_tag c.path, size: '250x500', class: 'border-solid border-2 border-slate-400'), inicio_compra_path(escolha: c) %>
+      <% end %>
+    </div>
+</section>
+

@@ -1,0 +1,32 @@
+<div id="<%= dom_id clothing %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Label:</strong>
+    <%= clothing.label %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Price:</strong>
+    <%= clothing.price %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Path:</strong>
+    <%= clothing.path %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Quant:</strong>
+    <%= clothing.quant %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= clothing.description %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this clothing", clothing, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this clothing', edit_clothing_path(clothing), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

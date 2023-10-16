@@ -1,0 +1,41 @@
+<section class='flex flex-col w-[calc(100vw-15px)]'>
+  <div class='flex justify-center items-center'>
+    <article>
+      <%= image_tag @compra.path, size: "550x1100"%>
+    </article>
+    <aside class='mt-16'>
+      <p class='text-xl leading-7'><%= @compra.label %><span class='block h-auto font-bold'>R$<%= @compra.price %></span></p>
+      <p class='leading-7 mt-4'>
+        Tamanho
+        <select class='block bg-zinc-700 text-slate-100 w-28 h-8 text-xs'>
+          <option value="">P</option>
+          <option value="">M</option>
+          <option value="">G</option>
+          <option value="">XG</option>
+        </select>
+      </p>
+    
+      <div class='mt-6'>
+        <button class='block w-72 h-auto border-solid border-2 rounded-md py-2 mb-2' type="">ADICIONAR NA BAG</button>
+        <button class='block w-72 h-auto border-solid border-2 rounded-md py-2 bg-zinc-700 text-slate-100' type="">COMPRAR JÁ</button>
+      </div>
+    
+      <p class='w-80 text-xs text-slate-600 leading-5 mt-4'>
+        <%= @compra.description %>
+        <span class='block'>Kashima Store. Todos os direitos reservados.</span>
+      </p>
+    </aside>
+  </div>
+  <div class='mx-auto mt-16'>
+    <p class='text-center'>VOCÊ TAMBÉM PODE CURTIR</p>
+    <article class='mt-4 grid grid-cols-3'>
+      <% for i in 0..2 %>
+        <p>
+          <%= link_to (image_tag @proximos[i].path, size: '250x500', class: 'inline mx-6'), inicio_compra_path(escolha: @proximos[i].id) %>      
+          <span class='block text-sm'><%= @proximos[i].label %></span>
+          <span class='block text-sm'><strong>R$<%= @proximos[i].price %></strong></span>
+        </p>
+      <% end %>
+    </article>
+  </div>
+</section>
