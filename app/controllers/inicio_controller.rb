@@ -10,4 +10,8 @@ class InicioController < ApplicationController
     @next = []
     0.upto(2) { @next.push(@proximos.delete_at(Random.rand(@proximos.size))) }
   end
+
+  def carrinho; end
+
+  def informacao; end
 end

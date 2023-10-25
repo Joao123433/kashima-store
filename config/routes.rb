@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'inicio/index'
   root 'inicio#index'
   get 'inicio/compra'
+  get 'inicio/carrinho'
+  get 'inicio/informacao'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

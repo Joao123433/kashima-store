@@ -4,9 +4,9 @@
       <%= image_tag @compra.path, size: "550x1100"%>
     </article>
     <aside class='mt-16'>
-      <p class='text-xl leading-7'><%= @compra.label %><span class='block h-auto font-bold'>R$<%= @compra.price %></span></p>
+      <p class='text-xl leading-7'><%= @compra.label %><span class='block h-auto font-bold'><%= t('buy.type_coin') %><%=  @compra.price %></span></p>
       <p class='leading-7 mt-4'>
-        Tamanho
+        <%= t('buy.size') %>
         <select class='block bg-zinc-700 text-slate-100 w-28 h-8 text-xs'>
           <option value="">P</option>
           <option value="">M</option>
@@ -16,18 +16,18 @@
       </p>
     
       <div class='mt-6'>
-        <button class='block w-72 h-auto border-solid border-2 rounded-md py-2 mb-2' type="">ADICIONAR NA BAG</button>
-        <button class='block w-72 h-auto border-solid border-2 rounded-md py-2 bg-zinc-700 text-slate-100' type="">COMPRAR JÁ</button>
+        <button class='block w-72 h-auto border-solid border-2 rounded-md py-2 mb-2' type=""><%= t('buy.bag') %></button>
+        <button class='block w-72 h-auto border-solid border-2 rounded-md py-2 bg-zinc-700 text-slate-100' type=""><%= t('buy.buy') %></button>
       </div>
     
       <p class='w-80 text-xs text-slate-600 leading-5 mt-4'>
         <%= @compra.description %>
-        <span class='block'>Kashima Store. Todos os direitos reservados.</span>
+        <span class='block'><%= t('buy.rights') %></span>
       </p>
     </aside>
   </div>
   <div class='mx-auto mt-16'>
-    <p class='text-center'>VOCÊ TAMBÉM PODE CURTIR</p>
+    <p class='text-center'><%= t('buy.suggestion') %></p>
     <article class='mt-4 grid grid-cols-3 gap-5'>
       <% for i in 0..2 %>
         <p>

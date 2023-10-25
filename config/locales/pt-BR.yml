@@ -1,0 +1,35 @@
+pt-BR:
+  languages:
+    portuguese: Português
+    english: Inglês
+  links:
+    information: Informação
+    checkout: Carrinho
+  index:
+    h1: LISTA DE PRODUTOS
+  buy:
+    bag: ADICIONAR NA BAG
+    buy: COMPRAR JÁ
+    suggestion: VOCÊ TAMBÉM PODE CURTIR
+    size: Tamanho
+    type_coin: R$
+    rights: Kashima Store. Todos os direitos reservados.
+  information:
+    h1: 'Kashima Store: Descubra o Submundo da Moda Autêntica'
+    h2_1: 'Sobre Nós'
+    p_1: Bem-vindo à Kashima Store, onde a moda underground se encontra com a autenticidade. Nós não somos apenas uma marca; somos uma declaração de individualidade, inspirada por subculturas e movimentos artísticos alternativos.
+    h2_2: 'Estilo Único e Provocativo'
+    p_2: Explore nossa ousada fusão de estilos, cores e padrões únicos que desafiam normas. Cada peça na Kashima Store conta uma história de resistência e autenticidade, incentivando você a abraçar sua singularidade.
+    h2_3: 'Edições Limitadas e Exclusividade'
+    p_3: 'A maioria das nossas peças é produzida em edições limitadas, garantindo a exclusividade que nossos clientes merecem. Na Kashima Store, não seguimos tendências; criamos experiências pessoais e íntimas.'
+    h2_4: 'Compromisso com a Sustentabilidade'
+    p_4: Apesar de estarmos no submundo, valorizamos nosso planeta. Comprometemo-nos a adotar práticas sustentáveis em nossa produção, escolhendo materiais eco-friendly sempre que possível.
+    h2_5: 'Comunidade Underground'
+    p_5: Junte-se à nossa comunidade no submundo da moda. Siga-nos nas redes sociais para conectar-se com outros amantes da moda underground, compartilhar inspirações e participar de eventos exclusivos.
+    h2_6: 'Arte, Música e Cultura'
+    p_6: Imersos em várias formas de arte, música e cultura underground, colaboramos com artistas independentes e promovemos eventos que celebram a originalidade em todas as suas formas.
+    h2_7: 'Peças que Contam Histórias'
+    p_7: Cada peça da Kashima Store é uma narrativa. De jaquetas desgastadas a camisetas estampadas, cada item é concebido para contar uma história e criar uma experiência única.
+    h2_8: 'Enfrente o Convencional, Abraçe o Kashima'
+    p_8: Se busca mais do que roupas, se procura uma forma de expressão verdadeira e destemida, bem-vindo ao submundo da Kashima Store. A moda é uma revolução, e cada peça é uma declaração de autenticidade w.
+

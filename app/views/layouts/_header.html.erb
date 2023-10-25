@@ -1,8 +1,12 @@
 <header class="flex flex-col items-center justify-center bg-kashima-gray m-0 p-0">
-    <div><%= image_tag 'Logo-kashima', size: "100x100"%></div>
-    <div class="flex flex-row justify-around w-96 mb-3">
-        <p><%= link_to "Compre agora", "#" %></p>
-        <p><%= link_to "Contato", "#" %></p>
-        <p><%= link_to "Informações", "#" %></p>
-    </div>
+  <div>
+    <%= link_to (image_tag 'Logo-kashima', size: "100x100"), root_path %>
+  </div>
+  
+  <div class="flex flex-row justify-between items-center w-96 mb-3">
+    <p><%= link_to t('links.information'), inicio_informacao_path %></p>
+    <p><%= link_to t('links.checkout'), inicio_carrinho_path %></p>
+    <p><%= link_to t('languages.portuguese'), request.path << '?locale=pt-BR' %></p>
+    <p><%= link_to t('languages.english'), request.path << '?locale=en' %></p>
+  </div>
 </header>

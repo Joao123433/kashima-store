@@ -1,33 +1,36 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  languages:
+    portuguese: Portuguese
+    english:: English
+  links:
+    information: Information
+    checkout: Checkout
+  index:
+    h1: CATALOG
+  buy:
+    bag: ADD TO BAG
+    buy: BUY
+    suggestion: YOU MAY ALSO LIKE
+    size: Size
+    type_coin: US$
+    rights: Kashima Store. All rights reserved.
+  information:
+    h1: 'Kashima Store: Discover the Underworld of Authentic Fashion'
+    h2_1: 'About Us'
+    p_1: Welcome to Kashima Store, where underground fashion meets authenticity. We are not just a brand; we are a statement of individuality, inspired by subcultures and alternative artistic movements.
+    h2_2: 'Unique and Provocative Style'
+    p_2: Explore our bold fusion of styles, colors, and unique patterns that defy norms. Each piece at Kashima Store tells a story of resistance and authenticity, encouraging you to embrace your uniqueness.
+    h2_3: 'Limited Editions and Exclusivity'
+    p_3: Most of our pieces are produced in limited editions, ensuring the exclusivity our customers deserve. At Kashima Store, we don't follow trends; we create personal and intimate experiences.
+    h2_4: 'Commitment to Sustainability'
+    p_4: Despite being in the underworld, we value our planet. We commit to adopting sustainable practices in our production, choosing eco-friendly materials whenever possible.
+    h2_5: 'Underground Community'
+    p_5: Join our community in the underworld of fashion. Follow us on social media to connect with other underground fashion enthusiasts, share inspirations, and participate in exclusive events.
+    h2_6: 'Art, Music, and Culture'
+    p_6: Immersed in various forms of art, music, and underground culture, we collaborate with independent artists and promote events that celebrate originality in all its forms.
+    h2_7: 'Pieces that Tell Stories'
+    p_7: Each piece from Kashima Store is a narrative. From worn jackets to printed T-shirts, each item is designed to tell a story and create a unique experience.
+    h2_8: 'Challenge the Conventional, Embrace Kashima'
+    p_8: If you seek more than just clothes, if you're looking for a true and fearless form of expression, welcome to the underworld of Kashima Store. Fashion is a revolution, and each piece is a statement of authenticity.
+
+

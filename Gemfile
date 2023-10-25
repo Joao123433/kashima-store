@@ -32,6 +32,7 @@ gem "jbuilder"
 
 gem 'tty-spinner'
 
+gem 'rails-i18n'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

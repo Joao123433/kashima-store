@@ -15,6 +15,19 @@ module.exports = {
       colors: {
         'kashima-gray': '#F1F1F1'
       },
+      fontSize: {
+        'h1': '1.5rem'
+      },
+      padding: {
+        '8': '2rem'
+      },
+      margin: {
+        '4': '1rem',
+        '6': '2.5rem'
+      },
+      textAlign: {
+        'justify': 'justify',
+      },
     },
   },
   plugins: [
