@@ -9,9 +9,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      width: {
+        '3/4': 'calc(100vw - 100px)'
+      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      fontWeight: {
+        normal: '300'
+      },     
       colors: {
         'kashima-gray': '#F1F1F1'
       },
@@ -19,11 +25,13 @@ module.exports = {
         'h1': '1.5rem'
       },
       padding: {
-        '8': '2rem'
+        '8': '2rem',
+        '40': '150px'
       },
       margin: {
         '4': '1rem',
-        '6': '2.5rem'
+        '6': '2.5rem',
+        '40': '150px'
       },
       textAlign: {
         'justify': 'justify',

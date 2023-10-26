@@ -1,5 +1,6 @@
 class InicioController < ApplicationController
   before_action :index
+  before_action :carrinho
   layout 'secondApplication', only: %i[compra carrinho]
 
   def index
@@ -21,8 +22,15 @@ class InicioController < ApplicationController
     @compra = Clothing.find(params['id'])
     @cart_items = session[:cart] || []
 
-    item_uuid = SecureRandom.uuid
-    @cart_items << { id: item_uuid, product_name: @compra.label, price: @compra.price, path: @compra.path, quantity: 1 }  
+    existing_item = @cart_items.find { |item| item['product_name'] == @compra.label }
+
+    if existing_item
+      existing_item['quantity'] += 1
+    else
+      item_uuid = SecureRandom.uuid
+      @cart_items << { id: item_uuid, product_name: @compra.label, price: @compra.price, path: @compra.path, quantity: 1 }  
+    end
+
     session[:cart] = @cart_items
     redirect_to inicio_carrinho_path, notice: 'Item adicionado ao carrinho com sucesso.'
   end
@@ -31,8 +39,14 @@ class InicioController < ApplicationController
     @cart_items = session[:cart] || []
     item_id = params['id']
 
-    @cart_items.delete_if { |item| item['id'] == item_id }
-    session[:cart] = @cart_items
+    removing_item = @cart_items.find { |item| item['id'] == item_id }
+
+    if removing_item['quantity'] > 1
+      removing_item['quantity'] -= 1
+    else
+      @cart_items.delete_if { |item| item['id'] == item_id }
+      session[:cart] = @cart_items
+    end
 
     respond_to do |format|
       format.html { redirect_to inicio_carrinho_path, notice: 'Item removido do carrinho com sucesso.' }

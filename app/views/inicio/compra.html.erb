@@ -4,15 +4,10 @@
       <%= image_tag @compra.path, size: "550x1100"%>
     </article>
     <aside class='mt-16'>
-      <p class='text-xl leading-7'><%= @compra.label %><span class='block h-auto font-bold'><%= t('buy.type_coin') %><%=  @compra.price %></span></p>
+      <p class='text-xl leading-7'><%= @compra.label %><span class='block h-auto font-bold'><%= t('buy.type_coin') %><%=  @compra.price.to_s.sub(/[.]/, ',') %>0</span></p>
       <p class='leading-7 mt-4'>
         <%= t('buy.size') %>
-        <select class='block bg-zinc-700 text-slate-100 w-28 h-8 text-xs'>
-          <option value="">P</option>
-          <option value="">M</option>
-          <option value="">G</option>
-          <option value="">XG</option>
-        </select>
+        
       </p>
     
      <div class='mt-6'>

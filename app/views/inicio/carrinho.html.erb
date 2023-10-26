@@ -1,17 +1,36 @@
-<h1 class='text-center'>Carrinho de Compras</h1>
-
-<% if @cart_items.empty? %>
-  <p>Seu carrinho está vazio.</p>
-<% else %>
-  <ul>
-    <% @cart_items.each do |item| %>
-      <p><%= item['product_name'] %></p>
-      <p><%= item['price'] %></p>
-      <p><%= item['path'] %></p>
-      <p><%= item['quantity'] %></p>
-      <%= button_to 'Remover', inicio_remover_do_carrinho_path(item['id']), method: :delete, data: { confirm: 'Tem certeza que deseja remover este item do carrinho?' }, class: 'ml-2' %>    
-    <% end %>
-  </ul>
-<% end %>
-
-<%= link_to 'Continuar Comprando', root_path %>
+<section class='w-[calc(100vw-15px)]'>
+  <h1 class='text-center text-h1 my-4'>Carrinho de Compras</h1>
+  <% if @cart_items.empty? %>
+    <p class='text-center my-4'>Seu carrinho está vazio.</p>
+  <% else %>
+    <table class='w-3/4 '>
+      <thead>
+        <tr>
+          <th class='font-normal'>Produto</th>
+          <th class='font-normal'>Tamanho</th>
+          <th class='font-normal'>Quantidade</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @cart_items.each do |item| %>
+          <tr class='my-4'>
+            <th class='flex items-center pl-40 w-18 font-normal'><%= image_tag item['path'], size: '100x200' %><%= item['product_name'] %></th>
+            <th>
+              <select class='block w-28 h-8 text-xs mx-auto'>
+                <option value="">P</option>
+                <option value="">M</option>
+                <option value="">G</option>
+                <option value="">XG</option>
+              </select>
+            </th>
+            <th><%= item['quantity'] %></th>
+            <th>R$<%= item['price'].to_s.sub(/[.]/, ',') %>0</th>
+            <th><%= button_to 'Remover', inicio_remover_do_carrinho_path(item['id']), method: :delete, data: { confirm: 'Tem certeza que deseja remover este item do carrinho?' }, class: 'ml-2' %></th>
+          <tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+  <%= link_to 'Continuar Comprando', root_path, class: 'block w-72 h-auto border-solid border-2 rounded-md py-2 bg-zinc-700 text-slate-100 text-center mx-auto' %>
+</section>

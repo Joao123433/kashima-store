@@ -11,9 +11,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class='font-sans'>
     <%= render "layouts/header" %>
-    <main class="container w-screen m-0">
+    <main class="container w-[calc(100vw-15px)] m-0">
       <%= yield %>
     </main>
     <%= render "layouts/footer" %>
