@@ -4,9 +4,7 @@ Rails.application.routes.draw do
   root 'inicio#index'
   get 'inicio/compra'
   get 'inicio/carrinho'
+  post 'inicio/adicionar_ao_carrinho/:id', to: 'inicio#adicionar_ao_carrinho', as: 'inicio_adicionar_ao_carrinho'
+  delete 'inicio/remover_do_carrinho/:id', to: 'inicio#remover_do_carrinho', as: 'inicio_remover_do_carrinho'
   get 'inicio/informacao'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
 end

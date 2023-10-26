@@ -15,11 +15,11 @@
         </select>
       </p>
     
-      <div class='mt-6'>
-        <button class='block w-72 h-auto border-solid border-2 rounded-md py-2 mb-2' type=""><%= t('buy.bag') %></button>
-        <button class='block w-72 h-auto border-solid border-2 rounded-md py-2 bg-zinc-700 text-slate-100' type=""><%= t('buy.buy') %></button>
-      </div>
-    
+     <div class='mt-6'>
+      <%= form_with url: inicio_adicionar_ao_carrinho_path(id: @compra.id), method: :post do |form| %>
+        <%= form.submit t('buy.buy'), class: 'block w-72 h-auto border-solid border-2 rounded-md py-2 bg-zinc-700 text-slate-100 text-center' %>
+      <% end %>
+    </div>
       <p class='w-80 text-xs text-slate-600 leading-5 mt-4'>
         <%= @compra.description %>
         <span class='block'><%= t('buy.rights') %></span>

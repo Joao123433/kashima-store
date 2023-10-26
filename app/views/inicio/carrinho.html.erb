@@ -1,0 +1,17 @@
+<h1 class='text-center'>Carrinho de Compras</h1>
+
+<% if @cart_items.empty? %>
+  <p>Seu carrinho está vazio.</p>
+<% else %>
+  <ul>
+    <% @cart_items.each do |item| %>
+      <p><%= item['product_name'] %></p>
+      <p><%= item['price'] %></p>
+      <p><%= item['path'] %></p>
+      <p><%= item['quantity'] %></p>
+      <%= button_to 'Remover', inicio_remover_do_carrinho_path(item['id']), method: :delete, data: { confirm: 'Tem certeza que deseja remover este item do carrinho?' }, class: 'ml-2' %>    
+    <% end %>
+  </ul>
+<% end %>
+
+<%= link_to 'Continuar Comprando', root_path %>
