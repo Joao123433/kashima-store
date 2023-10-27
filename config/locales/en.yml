@@ -32,5 +32,12 @@ en:
     p_7: Each piece from Kashima Store is a narrative. From worn jackets to printed T-shirts, each item is designed to tell a story and create a unique experience.
     h2_8: 'Challenge the Conventional, Embrace Kashima'
     p_8: If you seek more than just clothes, if you're looking for a true and fearless form of expression, welcome to the underworld of Kashima Store. Fashion is a revolution, and each piece is a statement of authenticity.
-
-
+  checkout:
+    h1: Checkout
+    p: Your shopping cart is empty
+    th1: Product
+    th2: Size
+    th3: Quantity
+    th4: Value
+    btnRemove: Remove
+    btnContinue: Keep buying

@@ -32,4 +32,13 @@ pt-BR:
     p_7: Cada peça da Kashima Store é uma narrativa. De jaquetas desgastadas a camisetas estampadas, cada item é concebido para contar uma história e criar uma experiência única.
     h2_8: 'Enfrente o Convencional, Abraçe o Kashima'
     p_8: Se busca mais do que roupas, se procura uma forma de expressão verdadeira e destemida, bem-vindo ao submundo da Kashima Store. A moda é uma revolução, e cada peça é uma declaração de autenticidade w.
-
+  checkout:
+    h1: Carrinho de Compras
+    p: Seu Carrinho está Vazio
+    th1: Produto
+    th2: Tamanho
+    th3: Quantidade
+    th4: Valor
+    btnRemove: Remover
+    btnContinue: Continuar Comprando
+    

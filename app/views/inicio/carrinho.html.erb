@@ -1,14 +1,14 @@
 <section class='w-[calc(100vw-15px)]'>
-  <h1 class='text-center text-h1 my-4'>Carrinho de Compras</h1>
+  <h1 class='text-center text-h1 my-4'><%= t('checkout.h1') %></h1>
   <% if @cart_items.empty? %>
-    <p class='text-center my-4'>Seu carrinho está vazio.</p>
+    <p class='text-center my-4'><%= t('checkout.p') %></p>
   <% else %>
     <table class='w-3/4 '>
       <thead>
         <tr>
-          <th class='font-normal'>Produto</th>
-          <th class='font-normal'>Tamanho</th>
-          <th class='font-normal'>Quantidade</th>
+          <th class='font-normal'><%= t('checkout.th1') %></th>
+          <th class='font-normal'><%= t('checkout.th2') %></th>
+          <th class='font-normal'><%= t('checkout.th3') %></th>
           <th>Valor</th>
         </tr>
       </thead>
@@ -19,11 +19,11 @@
             <th><%= item['size'] %></th>
             <th><%= item['quantity'] %></th>
             <th>R$<%= (item['price'].to_f*item['quantity'].to_f).to_s.sub(/[.]/, ',') %>0</th>
-            <th><%= button_to 'Remover', inicio_remover_do_carrinho_path(item['id']), method: :delete, data: { confirm: 'Tem certeza que deseja remover este item do carrinho?' }, class: 'ml-2' %></th>
+            <th><%= button_to t('checkout.btnRemove'), inicio_remover_do_carrinho_path(item['id']), method: :delete, data: { confirm: 'Tem certeza que deseja remover este item do carrinho?' }, class: 'ml-2' %></th>
           <tr>
         <% end %>
       </tbody>
     </table>
   <% end %>
-  <%= link_to 'Continuar Comprando', root_path, class: 'block w-72 h-auto border-solid border-2 rounded-md py-2 bg-zinc-700 text-slate-100 text-center mx-auto' %>
+  <%= link_to t('checkout.btnContinue'), root_path, class: 'block w-72 h-auto border-solid border-2 rounded-md py-2 bg-zinc-700 text-slate-100 text-center mx-auto' %>
 </section>
