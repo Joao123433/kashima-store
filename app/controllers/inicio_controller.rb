@@ -21,14 +21,15 @@ class InicioController < ApplicationController
   def adicionar_ao_carrinho
     @compra = Clothing.find(params['id'])
     @cart_items = session[:cart] || []
+    @size = params[:size]
 
-    existing_item = @cart_items.find { |item| item['product_name'] == @compra.label }
+    existing_item = @cart_items.find { |item| item['product_name'] == @compra.label && item['size'] == @size }
 
     if existing_item
       existing_item['quantity'] += 1
     else
       item_uuid = SecureRandom.uuid
-      @cart_items << { id: item_uuid, product_name: @compra.label, price: @compra.price, path: @compra.path, quantity: 1 }  
+      @cart_items << { id: item_uuid, product_name: @compra.label, price: @compra.price, size: @size, path: @compra.path, quantity: 1}
     end
 
     session[:cart] = @cart_items

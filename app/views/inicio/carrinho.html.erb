@@ -16,16 +16,9 @@
         <% @cart_items.each do |item| %>
           <tr class='my-4'>
             <th class='flex items-center pl-40 w-18 font-normal'><%= image_tag item['path'], size: '100x200' %><%= item['product_name'] %></th>
-            <th>
-              <select class='block w-28 h-8 text-xs mx-auto'>
-                <option value="">P</option>
-                <option value="">M</option>
-                <option value="">G</option>
-                <option value="">XG</option>
-              </select>
-            </th>
+            <th><%= item['size'] %></th>
             <th><%= item['quantity'] %></th>
-            <th>R$<%= item['price'].to_s.sub(/[.]/, ',') %>0</th>
+            <th>R$<%= (item['price'].to_f*item['quantity'].to_f).to_s.sub(/[.]/, ',') %>0</th>
             <th><%= button_to 'Remover', inicio_remover_do_carrinho_path(item['id']), method: :delete, data: { confirm: 'Tem certeza que deseja remover este item do carrinho?' }, class: 'ml-2' %></th>
           <tr>
         <% end %>

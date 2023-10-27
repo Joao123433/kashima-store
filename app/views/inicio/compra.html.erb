@@ -7,12 +7,18 @@
       <p class='text-xl leading-7'><%= @compra.label %><span class='block h-auto font-bold'><%= t('buy.type_coin') %><%=  @compra.price.to_s.sub(/[.]/, ',') %>0</span></p>
       <p class='leading-7 mt-4'>
         <%= t('buy.size') %>
-        
+        <select name='size' class='block bg-zinc-700 text-slate-100 w-28 h-8 text-xs'>
+          <option value="P">P</option>
+          <option value="M">M</option>
+          <option value="G">G</option>
+          <option value="XG">XG</option>
+        </select>
       </p>
     
      <div class='mt-6'>
-      <%= form_with url: inicio_adicionar_ao_carrinho_path(id: @compra.id), method: :post do |form| %>
-        <%= form.submit t('buy.buy'), class: 'block w-72 h-auto border-solid border-2 rounded-md py-2 bg-zinc-700 text-slate-100 text-center' %>
+       <%= form_with url: inicio_adicionar_ao_carrinho_path(id: @compra.id), method: :post do |form| %>
+         <%= form.hidden_field :size, id: 'size-field' %>
+         <%= form.submit t('buy.buy'), class: 'block w-72 h-auto border-solid border-2 rounded-md py-2 bg-zinc-700 text-slate-100 text-center', id: 'button' %>
       <% end %>
     </div>
       <p class='w-80 text-xs text-slate-600 leading-5 mt-4'>
@@ -34,3 +40,14 @@
     </article>
   </div>
 </section>
+
+<script>
+  function updateSizeField() {
+    let selectedSize = document.querySelector('[name=size]').value;
+    document.getElementById('size-field').value = selectedSize;
+  }
+
+  document.querySelector("#button"),addEventListener('click', () => {
+    updateSizeField()
+  })
+</script>
