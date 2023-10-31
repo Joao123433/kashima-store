@@ -21,6 +21,9 @@ module.exports = {
       colors: {
         'kashima-gray': '#F1F1F1'
       },
+      borderColor: {
+        'primary': '#18181B',
+      },
       fontSize: {
         'h1': '1.5rem'
       },

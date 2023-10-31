@@ -2,6 +2,9 @@
   <h1 class='text-center text-h1 my-4'><%= t('checkout.h1') %></h1>
   <% if @cart_items.empty? %>
     <p class='text-center my-4'><%= t('checkout.p') %></p>
+    <div class='text-center my-4'>
+      <%= link_to t('checkout.btnContinue'), root_path, class: 'inline-block w-72 h-auto border-solid border-2 rounded-md py-2 bg-zinc-700 text-slate-100 text-center mx-auto' %>
+    </div>
   <% else %>
     <table class='w-3/4 '>
       <thead>
@@ -24,6 +27,9 @@
         <% end %>
       </tbody>
     </table>
-  <% end %>
-  <%= link_to t('checkout.btnContinue'), root_path, class: 'block w-72 h-auto border-solid border-2 rounded-md py-2 bg-zinc-700 text-slate-100 text-center mx-auto' %>
+    <div class='text-center my-4'>
+      <%= link_to t('checkout.btnContinue'), root_path, class: 'inline-block w-72 h-auto border-solid border-2 rounded-md py-2 border-zinc-700 text-center mx-auto' %>
+      <%= link_to t('checkout.btnBuy'), '#', class: 'inline-block w-72 h-auto border-solid border-2 rounded-md py-2 bg-zinc-700 text-slate-100 text-center mx-auto' %>
+    </div>
+  <% end %> 
 </section>

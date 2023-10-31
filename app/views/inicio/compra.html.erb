@@ -18,7 +18,7 @@
      <div class='mt-6'>
        <%= form_with url: inicio_adicionar_ao_carrinho_path(id: @compra.id), method: :post do |form| %>
          <%= form.hidden_field :size, id: 'size-field' %>
-         <%= form.submit t('buy.buy'), class: 'block w-72 h-auto border-solid border-2 rounded-md py-2 bg-zinc-700 text-slate-100 text-center', id: 'button' %>
+         <%= form.submit t('buy.bag'), class: 'block w-72 h-auto border-solid border-2 rounded-md py-2 bg-zinc-700 text-slate-100 text-center', id: 'button' %>
       <% end %>
     </div>
       <p class='w-80 text-xs text-slate-600 leading-5 mt-4'>

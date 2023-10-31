@@ -9,7 +9,6 @@ pt-BR:
     h1: LISTA DE PRODUTOS
   buy:
     bag: ADICIONAR NA BAG
-    buy: COMPRAR
     suggestion: VOCÊ TAMBÉM PODE CURTIR
     size: Tamanho
     type_coin: R$
@@ -41,4 +40,4 @@ pt-BR:
     th4: Valor
     btnRemove: Remover
     btnContinue: Continuar Comprando
-    
+    btnBuy: Fechar Comprar

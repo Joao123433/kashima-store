@@ -1,0 +1,31 @@
+# fly.toml app configuration file generated for kashima-store on 2023-10-30T22:52:52-03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "kashima-store"
+primary_region = "gru"
+console_command = "/app/bin/rails console"
+
+[build]
+
+[[mounts]]
+  source = "data"
+  destination = "/data"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+
+[[statics]]
+  guest_path = "/app/public"
+  url_prefix = "/"
+
+[services.env]
+  RAILS_ENV = 'production'
+  SECRET_KEY_BASE = '01bcea0f0c6b7b77d0598ff3b04a005e31c5bf928728f2c0ea80f01006e57b59381903a89f2bfe38c63392374f57ab8f088cd0b87e920cba910a7cd15652e981'
+  DATABASE_URL = 'db/production.sqlite3'

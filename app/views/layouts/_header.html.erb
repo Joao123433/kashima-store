@@ -5,7 +5,7 @@
   
   <div class="flex flex-row justify-between items-center w-96 mb-3">
     <p><%= link_to t('links.information'), inicio_informacao_path %></p>
-    <p><%= link_to t('links.checkout'), inicio_carrinho_path %>-<span class='font-bold'><%= @cart_items.size %></span></p>
+    <p><%= link_to t('links.checkout'), inicio_carrinho_path %><span class='font-bold'></span></p>
     <p><%= link_to t('languages.portuguese'), request.path << '?locale=pt-BR' %></p>
     <p><%= link_to t('languages.english'), request.path << '?locale=en' %></p>
   </div>

@@ -9,7 +9,6 @@ en:
     h1: CATALOG
   buy:
     bag: ADD TO BAG
-    buy: BUY
     suggestion: YOU MAY ALSO LIKE
     size: Size
     type_coin: US$
@@ -41,3 +40,4 @@ en:
     th4: Value
     btnRemove: Remove
     btnContinue: Keep buying
+    btnBuy: Buy
