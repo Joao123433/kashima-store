@@ -2,7 +2,7 @@
 
 ## Projeto feito para praticar os conceitos basicos do desenvolvimento web
 
-Este projeto é feito em Rails 7 e utilizando o banco de dados SQLite3 para armazenar de dados.
+Este projeto é feito em Rails 7 e utilizando o banco de dados SQLite3 para armazenar os dados.
 
 ## Acesse o Projeto em
 
