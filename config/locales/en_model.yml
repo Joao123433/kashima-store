@@ -1,0 +1,14 @@
+en:
+  activerecord:
+    models:
+      clothing:
+        one: Clothing 
+        other: Clothings
+    attributes:
+      clothing:
+        id: 'Id:'
+        label: 'Name:'
+        price: 'Price:'
+        path: 'Path:'
+        quant: 'Quantity:'
+        description: 'Description:'

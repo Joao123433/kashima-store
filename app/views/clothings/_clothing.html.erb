@@ -1,37 +1,39 @@
 <div id="<%= dom_id clothing %>">
   <p class="my-5">
-    <strong class="block font-medium mb-1">ID:</strong>
+    <strong class="block mb-1"><%= Clothing.human_attribute_name('id') %></strong>
     <%= clothing.id %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Label:</strong>
+    <strong class="block mb-1"><%= Clothing.human_attribute_name('label') %></strong>
     <%= clothing.label %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Price:</strong>
+    <strong class="block mb-1"><%= Clothing.human_attribute_name('price') %></strong>
     <%= clothing.price %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Path:</strong>
+    <strong class="block mb-1"><%= Clothing.human_attribute_name('path') %></strong>
     <%= clothing.path %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Quant:</strong>
+    <strong class="block mb-1"><%= Clothing.human_attribute_name('quant') %></strong>
     <%= clothing.quant %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Description:</strong>
+    <strong class="block mb-1"><%= Clothing.human_attribute_name('description') %></strong>
     <%= clothing.description %>
   </p>
 
   <% if action_name != "show" %>
-    <%= link_to "Show this clothing", clothing, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this clothing', edit_clothing_path(clothing), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <div class='text-center'>
+      <%= link_to t('links.clothings.show'), clothing, class: "rounded-lg py-3 px-5 bg-zinc-700 text-slate-100 inline-block font-medium" %>
+      <%= link_to t('links.clothings.edit'), edit_clothing_path(clothing), class: "rounded-lg py-3 ml-2 px-5 bg-zinc-700 text-slate-100 inline-block font-medium" %>
+    </div>
     <hr class="mt-6">
   <% end %>
 </div>

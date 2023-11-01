@@ -1,11 +1,11 @@
-<div class="w-full">
+<div class="w-[calc(100vw-15px)] px-8 mt-4">
   <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg text-center" id="notice"><%= notice %></p>
   <% end %>
 
   <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Clothings</h1>
-    <%= link_to 'New clothing', new_clothing_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    <h1 class="font-bold text-4xl"><%= Clothing.model_name.human(count: @clothings.size) %></h1>
+    <%= link_to t('links.clothings.new'), new_clothing_path, class: "rounded-lg py-3 px-5 bg-zinc-700 text-slate-100 block font-medium" %>
   </div>
 
   <div id="clothings" class="min-w-full">

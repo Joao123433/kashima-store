@@ -5,6 +5,13 @@ pt-BR:
   links:
     information: Informação
     checkout: Carrinho
+    clothings:
+      show: Mostrar Roupa
+      edit: Editar Roupa
+      new: Nova Roupa
+      back: Voltar
+      destroy: Apagar Roupa
+      update: Atualizar Roupa
   index:
     h1: LISTA DE PRODUTOS
   buy:

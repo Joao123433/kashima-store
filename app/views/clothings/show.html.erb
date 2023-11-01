@@ -1,15 +1,15 @@
-<div class="mx-auto md:w-2/3 w-full flex">
+<div class="w-[calc(100vw-15px)] flex">
   <div class="mx-auto">
     <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg text-center" id="notice"><%= notice %></p>
     <% end %>
 
     <%= render @clothing %>
 
-    <%= link_to 'Edit this clothing', edit_clothing_path(@clothing), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t('links.clothings.edit'), edit_clothing_path(@clothing), class: "mt-2 rounded-lg py-3 px-5 bg-zinc-700 text-slate-100 inline-block font-medium" %>
     <div class="inline-block ml-2">
-      <%= button_to 'Destroy this clothing', clothing_path(@clothing), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      <%= button_to t('links.clothings.destroy'), clothing_path(@clothing), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-zinc-700 text-slate-100 font-medium" %>
     </div>
-    <%= link_to 'Back to clothings', clothings_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t('links.clothings.back'), clothings_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
 </div>

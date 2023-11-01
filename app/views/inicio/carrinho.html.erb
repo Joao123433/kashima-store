@@ -1,4 +1,7 @@
 <section class='w-[calc(100vw-15px)]'>
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg text-center" id="notice"><%= notice %></p>
+  <% end %>
   <h1 class='text-center text-h1 my-4'><%= t('checkout.h1') %></h1>
   <% if @cart_items.empty? %>
     <p class='text-center my-4'><%= t('checkout.p') %></p>
@@ -12,7 +15,7 @@
           <th class='font-normal'><%= t('checkout.th1') %></th>
           <th class='font-normal'><%= t('checkout.th2') %></th>
           <th class='font-normal'><%= t('checkout.th3') %></th>
-          <th>Valor</th>
+          <th><%= t('checkout.th4') %></th>
         </tr>
       </thead>
       <tbody>

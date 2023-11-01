@@ -1,0 +1,14 @@
+pt-BR:
+  activerecord:
+    models:
+      clothing:
+        one: Roupa 
+        other: Roupas
+    attributes:
+      clothing:
+        id: 'Identificador:'
+        label: 'Nome:'
+        price: 'Preço:'
+        path: 'Endereço da Imagem:'
+        quant: 'Quantidade:'
+        description: 'Descrisão:'
