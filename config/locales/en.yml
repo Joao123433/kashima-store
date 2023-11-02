@@ -12,6 +12,7 @@ en:
       back: Back
       destroy: Destroy this Clothing
       update: Update Clothing
+      editing: Editing Clothing
   index:
     h1: CATALOG
   buy:

@@ -12,6 +12,7 @@ pt-BR:
       back: Voltar
       destroy: Apagar Roupa
       update: Atualizar Roupa
+      editing: Editando Roupa
   index:
     h1: LISTA DE PRODUTOS
   buy:
