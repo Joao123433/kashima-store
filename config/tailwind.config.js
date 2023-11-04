@@ -39,6 +39,9 @@ module.exports = {
       textAlign: {
         'justify': 'justify',
       },
+      gridTemplateColumns: {
+        '2': 'repeat(2, minmax(0, 1fr))'
+      }
     },
   },
   plugins: [

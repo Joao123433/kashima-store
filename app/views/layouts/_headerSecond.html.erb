@@ -5,7 +5,11 @@
   
   <div class="flex flex-row justify-between items-center w-96 mb-3">
     <p><%= link_to t('links.information'), inicio_informacao_path %></p>
-    <p><%= link_to t('links.checkout'), inicio_carrinho_path %><span class='font-bold'></span></p>
+    <p><%= link_to t('links.checkout'), inicio_carrinho_path %><span class='font-bold'>
+      <% if @cart_items %>
+        <%= -@cart_items.size %>
+      <% end  %>
+    </span></p>
     <p><%= link_to 'Cadastro', clothings_path %></p>
   </div>
 </header>

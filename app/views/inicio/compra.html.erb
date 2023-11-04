@@ -15,30 +15,44 @@
         </select>
       </p>
     
-     <div class='mt-6'>
-       <%= form_with url: inicio_adicionar_ao_carrinho_path(id: @compra.id), method: :post do |form| %>
-         <%= form.hidden_field :size, id: 'size-field' %>
-         <%= form.submit t('buy.bag'), class: 'block w-72 h-auto border-solid border-2 rounded-md py-2 bg-zinc-700 text-slate-100 text-center', id: 'button' %>
-      <% end %>
-    </div>
+      <div class='mt-6'>
+        <%= form_with url: inicio_adicionar_ao_carrinho_path(id: @compra.id), method: :post do |form| %>
+          <%= form.hidden_field :size, id: 'size-field' %>
+          <%= form.submit t('buy.bag'), class: 'block w-72 h-auto border-solid border-2 rounded-md py-2 bg-zinc-700 text-slate-100 text-center', id: 'button' %>
+        <% end %>
+      </div>
       <p class='w-80 text-xs text-slate-600 leading-5 mt-4'>
         <%= @compra.description %>
         <span class='block'><%= t('buy.rights') %></span>
       </p>
     </aside>
   </div>
-  <div class='mx-auto mt-16'>
-    <p class='text-center'><%= t('buy.suggestion') %></p>
-    <article class='mt-4 grid grid-cols-3 gap-5'>
-      <% for i in 0..2 %>
-        <p>
-          <%= link_to (image_tag @next[i].path, size: '250x500', class: 'inline mx-6'), inicio_compra_path(escolha: @next[i].id) %>      
-          <span class='block text-sm'><%= @next[i].label %></span>
-          <span class='block text-sm'><strong>R$<%= @next[i].price %></strong></span>
-        </p>
-      <% end %>
-    </article>
-  </div>
+  <% if @next %>
+    <div class='mx-auto mt-16'>
+      <p class='text-center'><%= t('buy.suggestion') %></p>
+      <% if @next.size > 2 %>
+        <article class='mt-4 grid grid-cols-3 gap-5'>
+          <% @next.size.times do |i| %>
+            <p>
+              <%= link_to (image_tag @next[i].path, size: '250x500', class: 'inline mx-6'), inicio_compra_path(escolha: @next[i].id) %>      
+              <span class='block text-sm'><%= @next[i].label %></span>
+              <span class='block text-sm'><strong>R$<%= @next[i].price %></strong></span>
+            </p>
+          <% end %>
+        </article>
+      <% elsif @next.size > 1 %>
+        <article class='mt-4 grid grid-cols-2 gap-5'>
+          <% @next.size.times do |i| %>
+            <p>
+              <%= link_to (image_tag @next[i].path, size: '250x500', class: 'inline mx-6'), inicio_compra_path(escolha: @next[i].id) %>      
+              <span class='block text-sm'><%= @next[i].label %></span>
+              <span class='block text-sm'><strong>R$<%= @next[i].price %></strong></span>
+            </p>
+          <% end %>
+        </article>
+      <% end  %>
+    </div>
+  <% end %>
 </section>
 
 <script>
