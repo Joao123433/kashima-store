@@ -32,8 +32,7 @@ Recomendo o uso do [ASDF](https://asdf-vm.com/) para gerenciar versões do Ruby.
 
 3. Crie e Migre o Banco de Dados
     ```bash
-    rails db:create
-    rails db:migrate
+    rails dev:setup
 
 4. Inicie o Servidor
     ```bash
