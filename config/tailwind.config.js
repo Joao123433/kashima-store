@@ -10,7 +10,8 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        '3/4': 'calc(100vw - 100px)'
+        '3/4': 'calc(100vw - 100px)',
+        '100': ''
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans]
@@ -49,5 +50,36 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/container-queries'),
+    function ({ addComponents }) {
+      addComponents({
+        '.dropbtn': {
+          border: 'none',
+        },
+        '.dropdown': {
+          position: 'relative',
+          display: 'inline-block',
+        },
+        '.dropdown-content': {
+          display: 'none',
+          position: 'absolute',
+          backgroundColor: '#f1f1f1',
+          minWidth: '160px',
+          boxShadow: '0px 8px 16px 0px rgba(0,0,0,0.2)',
+          zIndex: '1',
+        },
+        '.dropdown-content a': {
+          color: 'black',
+          padding: '10px 12px',
+          textDecoration: 'none',
+          display: 'block',
+        },
+        '.dropdown-content a:hover': {
+          backgroundColor: '#ddd',
+        },
+        '.dropdown:hover .dropdown-content': {
+          display: 'block',
+        },
+      });
+    },
   ]
 }

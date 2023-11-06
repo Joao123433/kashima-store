@@ -5,12 +5,20 @@
   
   <div class="flex flex-row justify-between items-center w-96 mb-3">
     <p><%= link_to t('links.information'), inicio_informacao_path %></p>
-    <p><%= link_to t('links.checkout'), inicio_carrinho_path %><span class='font-bold'>
-      <% if @cart_items %>
-        <%= -@cart_items.size %>
-      <% end  %>
-    </span></p>
-    <p><%= link_to t('languages.portuguese'), request.path << '?locale=pt-BR' %></p>
-    <p><%= link_to t('languages.english'), request.path << '?locale=en' %></p>
+    <p><%= link_to t('links.checkout'), inicio_carrinho_path %><span class='font-bold'></span></p>
+    <div class="dropdown">
+      <button class="dropbtn"><%= t('select.language') %></button>
+      <div class="dropdown-content">
+        <%= link_to t('languages.portuguese'), request.path << '?locale=pt-BR' %>
+        <%= link_to t('languages.english'), request.path << '?locale=en' %>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn"><%= t('select.register') %></button>
+      <div class="dropdown-content">
+        <%= link_to 'Usuário', clothings_path %>
+        <%= link_to 'Funcionário', clothings_path %>
+      </div>
+    </div>
   </div>
 </header>

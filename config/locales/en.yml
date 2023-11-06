@@ -2,6 +2,9 @@ en:
   languages:
     portuguese: Portuguese
     english:: English
+  select:
+    language: Language
+    register: Register
   links:
     information: Information
     checkout: Checkout

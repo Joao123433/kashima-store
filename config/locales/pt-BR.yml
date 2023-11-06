@@ -2,6 +2,9 @@ pt-BR:
   languages:
     portuguese: Português
     english: Inglês
+  select:
+    language: Idioma
+    register: Cadastro
   links:
     information: Informação
     checkout: Carrinho
