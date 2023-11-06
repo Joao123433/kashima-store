@@ -13,7 +13,7 @@ module.exports = {
         '3/4': 'calc(100vw - 100px)'
       },
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans]
       },
       fontWeight: {
         normal: '300'
@@ -22,7 +22,7 @@ module.exports = {
         'kashima-gray': '#F1F1F1'
       },
       borderColor: {
-        'primary': '#18181B',
+        'primary': '#18181B'
       },
       fontSize: {
         'h1': '1.5rem'
@@ -37,7 +37,7 @@ module.exports = {
         '40': '150px'
       },
       textAlign: {
-        'justify': 'justify',
+        'justify': 'justify'
       },
       gridTemplateColumns: {
         '2': 'repeat(2, minmax(0, 1fr))'

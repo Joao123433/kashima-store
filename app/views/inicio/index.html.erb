@@ -10,7 +10,7 @@
     
     <div class="grid grid-cols-3 gap-5 mb-11">
       <% @clotings.each do |c| %>
-        <%= link_to (image_tag c.path, size: '250x500', class: 'border-solid border-2 border-slate-400'), inicio_compra_path(escolha: c) %>
+        <%= link_to (image_tag c.path, size: '250x250', class: 'border-solid border-2 border-slate-400'), inicio_compra_path(escolha: c) %>
       <% end %>
     </div>
 </section>
