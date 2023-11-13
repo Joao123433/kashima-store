@@ -4,7 +4,7 @@ en:
     english:: English
   select:
     language: Language
-    register: Register
+    register: Login 
   links:
     information: Information
     checkout: Checkout
@@ -16,6 +16,7 @@ en:
       destroy: Destroy this Clothing
       update: Update Clothing
       editing: Editing Clothing
+      logoff: Logoff
   index:
     h1: CATALOG
   buy:

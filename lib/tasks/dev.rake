@@ -5,6 +5,18 @@ namespace :dev do
     show_spinner('Criando BD') { %x(rails db:create) }
     show_spinner('Migrando BD') { %x(rails db:migrate) }
     %x(rails dev:add_clothings)
+    %x(rails dev:add_admin)
+  end
+
+  desc 'Cria o Usuario root'
+  task add_admin: :environment do
+    show_spinner('Criando o usuario root') do
+      Admin.create!(
+        email: 'admin@teste.com',
+        password: 123456,
+        password_confirmation: 123456
+      )
+    end
   end
 
   desc 'Cria dados teste para o banco de dados clothing'

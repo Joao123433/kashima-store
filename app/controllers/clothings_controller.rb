@@ -1,5 +1,6 @@
 class ClothingsController < ApplicationController
   before_action :set_clothing, only: %i[ show edit update destroy ]
+  before_action :authenticate_admin!
 
   # GET /clothings or /clothings.json
   def index

@@ -16,6 +16,7 @@ pt-BR:
       destroy: Apagar Roupa
       update: Atualizar Roupa
       editing: Editando Roupa
+      logoff: Sair
   index:
     h1: LISTA DE PRODUTOS
   buy:

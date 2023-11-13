@@ -5,7 +5,11 @@
 
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-4xl"><%= Clothing.model_name.human(count: @clothings.size) %></h1>
-    <%= link_to t('links.clothings.new'), new_clothing_path, class: "rounded-lg py-3 px-5 bg-zinc-700 text-slate-100 block font-medium" %>
+    <div> 
+      <%= link_to t('links.clothings.new'), new_clothing_path, class: "rounded-lg py-3 px-5 bg-zinc-700 text-slate-100 block font-medium inline" %>
+      <%= link_to t('links.clothings.logoff'), destroy_admin_session_path, data: { 'turbo-method': :delete }, class: "rounded-lg py-3 px-5 bg-zinc-700 text-slate-100 block font-medium inline" %>
+
+    </div>
   </div>
 
   <div id="clothings" class="min-w-full">

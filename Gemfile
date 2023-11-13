@@ -34,6 +34,10 @@ gem 'tty-spinner'
 
 gem 'rails-i18n'
 
+gem 'devise'
+
+gem 'rake'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
